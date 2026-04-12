@@ -42,7 +42,7 @@ def update_credit_score(
     user_id: int,
     score: int,
     db: Session = Depends(get_db),
-    current_user: User = Depends(require_manager)
+    current_user: User = Depends(require_admin)   # ✅ FIX
 ):
     if not (300 <= score <= 900):
         raise HTTPException(status_code=400, detail="Credit score must be between 300 and 900")
