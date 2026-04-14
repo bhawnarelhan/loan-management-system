@@ -1,3 +1,12 @@
+# Environment - never push
+.env
+*.env
+.env example
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
